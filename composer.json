@@ -1,5 +1,5 @@
 {
-    "name": "silinternational/yii2-json-log-targets",
+    "name": "sil-org/yii2-json-log-targets",
     "type": "library",
     "description": "A collection of Yii2 log targets that format the log message as a JSON string.",
     "keywords": ["yii2", "json", "log", "target", "file", "syslog"],
