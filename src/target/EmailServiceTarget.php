@@ -2,7 +2,7 @@
 
 namespace Sil\JsonLog\target;
 
-use Sil\EmailService\Client\EmailServiceClient;
+use Sil\Idp\IdBroker\Client\IdBrokerClient;
 use Sil\JsonLog\JsonLogHelper;
 use yii\base\InvalidConfigException;
 use yii\helpers\Json;
@@ -87,12 +87,12 @@ class EmailServiceTarget extends Target
      */
     public function export()
     {
-        $emailService = new EmailServiceClient(
+        $emailService = new IdBrokerClient(
             $this->baseUrl,
             $this->accessToken,
             [
-                EmailServiceClient::ASSERT_VALID_IP_CONFIG => $this->assertValidIp,
-                EmailServiceClient::TRUSTED_IPS_CONFIG => $this->validIpRanges,
+                IdBrokerClient::ASSERT_VALID_IP_CONFIG => $this->assertValidIp,
+                IdBrokerClient::TRUSTED_IPS_CONFIG => $this->validIpRanges,
             ]
         );
 
