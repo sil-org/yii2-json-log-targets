@@ -131,7 +131,7 @@ class JsonLogHelper
      */
     protected function isJsonString($string)
     {
-        if (! is_string($string)) {
+        if (!is_string($string)) {
             return false;
         }
 
@@ -156,7 +156,7 @@ class JsonLogHelper
      */
     protected function isMultilineString($data)
     {
-        if (! is_string($data)) {
+        if (!is_string($data)) {
             return false;
         } else {
             return strpos($data, "\n") !== false;

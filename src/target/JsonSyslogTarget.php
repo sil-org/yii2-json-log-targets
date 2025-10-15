@@ -1,4 +1,5 @@
 <?php
+
 namespace Sil\JsonLog\target;
 
 use Sil\JsonLog\JsonLogHelper;
