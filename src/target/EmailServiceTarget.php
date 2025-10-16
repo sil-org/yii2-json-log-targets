@@ -91,7 +91,7 @@ class EmailServiceTarget extends Target
             $this->baseUrl,
             $this->accessToken,
             [
-                IdBrokerClient::ASSERT_VALID_IP_CONFIG => $this->assertValidIp,
+                IdBrokerClient::ASSERT_VALID_BROKER_IP_CONFIG => $this->assertValidIp,
                 IdBrokerClient::TRUSTED_IPS_CONFIG => $this->validIpRanges,
             ]
         );
