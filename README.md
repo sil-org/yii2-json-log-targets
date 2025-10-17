@@ -1,4 +1,5 @@
 # Yii2 JSON Log Targets
+
 A collection of Yii2 log targets that format the log message as a JSON string.
 
 ## Usage
@@ -11,6 +12,7 @@ Note, this target can throw a Sil\EmailService\Client\EmailServiceClientExceptio
 from this target to ensure a looping event is avoided. 
 
 As part of a Yii2 app configuration:
+
 ```php
     'log' => [
         'targets' => [
@@ -38,10 +40,12 @@ As part of a Yii2 app configuration:
 ```
 
 ### JsonFileTarget
+
 The JsonFileTarget is just like the standard FileTarget except it accepts an array of data in the message
-and formats it as json before writing to a file. 
+and formats it as json before writing to a file.
 
 As part of a Yii2 app configuration:
+
 ```php
     'log' => [
         'targets' => [
@@ -55,10 +59,12 @@ As part of a Yii2 app configuration:
 ```
 
 ### JsonSyslogTarget
+
 The JsonSyslogTarget is just like the standard SyslogTarget except it accepts an array of data in the message
-and formats it as json before sending to Syslog. 
+and formats it as json before sending to Syslog.
 
 As part of a Yii2 app configuration:
+
 ```php
     'log' => [
         'targets' => [
@@ -79,7 +85,7 @@ As part of a Yii2 app configuration:
 
 ### Have the log prefix (if used) return JSON
 
-Example (to be placed into your Yii2 config file's 
+Example (to be placed into your Yii2 config file's
 ```['components']['log']['targets']``` array):
 
     [
@@ -102,8 +108,9 @@ Example (to be placed into your Yii2 config file's
     ],
 
 ### If using syslog to send to Logentries, only send the JSON content
-Make sure that the template you define for Logentries in your rsyslog.conf file 
-does not add other content before the ```%msg%``` data (aside from your 
+
+Make sure that the template you define for Logentries in your rsyslog.conf file
+does not add other content before the ```%msg%``` data (aside from your
 Logentries key). For example, do something like this...
 
     $template Logentries,"LOGENTRIESKEY %msg%\n"

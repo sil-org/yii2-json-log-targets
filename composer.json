@@ -2,7 +2,14 @@
   "name": "sil-org/yii2-json-log-targets",
   "type": "library",
   "description": "A collection of Yii2 log targets that format the log message as a JSON string.",
-  "keywords": ["yii2", "json", "log", "target", "file", "syslog"],
+  "keywords": [
+    "yii2",
+    "json",
+    "log",
+    "target",
+    "file",
+    "syslog"
+  ],
   "license": "MIT",
   "autoload": {
     "psr-4": {
@@ -22,7 +29,7 @@
     "codemix/yii2-streamlog": "^1.3",
     "phpunit/phpunit": "^8.0",
     "roave/security-advisories": "dev-master",
-    "silinternational/email-service-php-client":"^2.0.0"
+    "silinternational/email-service-php-client": "^2.0.0"
   },
   "config": {
     "allow-plugins": {

@@ -1,4 +1,5 @@
 <?php
+
 namespace Sil\JsonLog\target;
 
 use codemix\streamlog\Target as Streamlog;
