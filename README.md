@@ -5,11 +5,12 @@ A collection of Yii2 log targets that format the log message as a JSON string.
 ## Usage
 
 ### EmailServiceTarget
-The EmailServiceTarget is used to send logs to our external 
-[Email Service API](https://github.com/silinternational/email-service)
 
-Note, this target can throw a Sil\EmailService\Client\EmailServiceClientException that should be excluded 
-from this target to ensure a looping event is avoided. 
+The EmailServiceTarget is used to send logs to the email endpoint
+in [ID Broker](https://github.com/sil-org/idp-id-broker).
+
+Note, this target can throw an exception that should be excluded in the target configuration to ensure a looping
+event is avoided. The exception is `Sil\Idp\IdBroker\Client\EmailServiceClientException`.
 
 As part of a Yii2 app configuration:
 
@@ -20,7 +21,7 @@ As part of a Yii2 app configuration:
                 'class' => 'Sil\JsonLog\target\EmailServiceTarget',
                 'levels' => ['error'],
                 'except' => [
-                    'Sil\EmailService\Client\EmailServiceClientException',
+                    'Sil\Idp\IdBroker\Client\EmailServiceClientException',
                 ],
                 'logVars' => [], // Disable logging of _SERVER, _POST, etc.
                 'message' => [
