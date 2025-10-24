@@ -41,6 +41,10 @@ class EmailServiceTarget extends Target
      */
     public function init()
     {
+        if (!$this->enabled) {
+            return;
+        }
+
         parent::init();
         if (empty($this->baseUrl)) {
             throw new InvalidConfigException('The "baseUrl" option must be set for EmailServiceTarget::baseUrl.');
