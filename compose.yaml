@@ -1,6 +1,6 @@
 services:
   php:
-    image: silintl/php8:8.3
+    image: ghcr.io/sil-org/php8:8.3
     volumes:
       - ./:/data
     working_dir: /data
